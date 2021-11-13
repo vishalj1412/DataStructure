@@ -1,0 +1,97 @@
+
+9 rows in set (0.0010 sec)
+ MySQL  localhost:3306 ssl  SQL > create database payroll_service;
+Query OK, 1 row affected (0.6006 sec)
+ MySQL  localhost:3306 ssl  SQL > show databases;
++--------------------+
+| Database           |
++--------------------+
+| addressbookservice |
+| demokey            |
+| information_schema |
+| mysql              |
+| pay_roll           |
+| payroll_service    |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+10 rows in set (0.0012 sec)
+ MySQL  localhost:3306 ssl  SQL > create table employee_payrool (
+                               -> empId int IDENTITY(1,1) PRIMARY KEY,
+                               -> name varchar(100),
+                               -> salary double,
+                               -> start_date date
+                               -> );
+ERROR: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IDENTITY(1,1) PRIMARY KEY,
+name varchar(100),
+salary double,
+ MySQL  localhost:3306 ssl  SQL > create table employee_payrool ( empId int IDENTITY(1,1) PRIMARY KEY, name varchar(100), salary double, start_date date );
+ MySQL  localhost:3306 ssl  SQL > create table employee_payrool ( empId int IDENTITY(1,1) PRIMARY KEY, name varchar(100), salary double, start_date date );
+ MySQL  localhost:3306 ssl  SQL > create table employee_payrool ( empId int IDENTITY(1,1) PRIMARY KEY, name varchar(100), salary double, start_date date );
+ MySQL  localhost:3306 ssl  SQL > create table employee_payrool ( empId int PRIMARY KEY, name varchar(100), salary double, start_date date );
+ERROR: 1046 (3D000): No database selected
+ MySQL  localhost:3306 ssl  SQL > use database payroll_service;
+Incorrect number of arguments for use command, usage:
+\use <schema_name>
+ MySQL  localhost:3306 ssl  SQL > create table employee_payrool ( empId int PRIMARY KEY, name varchar(100), salary double, start_date date );
+ERROR: 1046 (3D000): No database selected
+ MySQL  localhost:3306 ssl  SQL > use payroll_service;
+Default schema set to `payroll_service`.
+Fetching table and column names from `payroll_servicreate table employee_payrool ( empId int PRIMARY KEY, name varchar(100), salary double, start_date date );
+ERROR: 1050 (42S01): Table 'employee_payrool' already existsble employee_payrool ( empId int PRIMARY KEY, name varchar(100), salary double, start_date date );
+ MySQL  localhost:3306 ssl  payroll_service  SQL > create table employee_payroll ( empId int PRIMARY KEY, name varchar(100), salary double, start_date date );
+Query OK, 0 rows affected (0.8412 sec)rvice  SQL > create table employee_payrool ( empId int PRIMARY KEY, name varchar(100), salary double, start_date date );             create table employee_payrool ( empId in MySQL  localhost:3306 ssl  payroll_service  SQL > create table employee_payroolcreate table employee_payroll ( empId int PRIMARY KEY, name varchar(100), salary double, start_date date );
+ MySQL  localhost:3306 ssl  payroll_service  SQL > create table employee_payrool ( empId int PRIMARY KEY, name varchar(1 MySQL  localhost:3306 ssl  payroll_service  SQL > create table employee_payroll ( empId int PRIMARY KEY, name varchar(100), salary double, start_date date );
+ERROR: 1050 (42S01): Table 'employee_payroll' already exists
+ MySQL  localhost:3306 ssl  payroll_service  SQL > insert into employee_payroll (empId,name,salary,start_date) values(1,vishal,30000,2014-3-14);
+ERROR: 1054 (42S22): Unknown column 'vishal' in 'field list'
+ MySQL  localhost:3306 ssl  payroll_service  SQL > insert into employee_payroll (empId,name,salary,start_date) values(1,'vishal',30000,2014-3-14);
+ERROR: 1292 (22007): Incorrect date value: '1997' for column 'start_date' at row 1
+ MySQL  localhost:3306 ssl  payroll_service  SQL > insert into employee_payroll (empId,name,salary,start_date) values(1,'vishal',30000,'2014-3-14');
+Query OK, 1 row affected (0.1501 sec)
+ MySQL  localhost:3306 ssl  payroll_service  SQL > select 8 from employee_payroll;
++---+
+| 8 |
++---+
+| 8 |
++---+
+1 row in set (0.0007 sec)
+ MySQL  localhost:3306 ssl  payroll_service  SQL > select * from employee_payroll;
++-------+--------+--------+------------+
+| empId | name   | salary | start_date |
++-------+--------+--------+------------+
+|     1 | vishal |  30000 | 2014-03-14 |
++-------+--------+--------+------------+
+1 row in set (0.0547 sec)
+ MySQL  localhost:3306 ssl  payroll_service  SQL > insert into employee_payroll (empId,name,salary,start_date) values(2,'raj',30050,'2018-3-17');
+Query OK, 1 row affected (0.1135 sec)
+ MySQL  localhost:3306 ssl  payroll_service  SQL > insert into employee_payroll (empId,name,salary,start_date) values(3,'ram',33350,'2008-3-11');
+Query OK, 1 row affected (0.0962 sec)
+ MySQL  localhost:3306 ssl  payroll_service  SQL > select * from employee_payroll;
++-------+--------+--------+------------+
+| empId | name   | salary | start_date |
++-------+--------+--------+------------+
+|     1 | vishal |  30000 | 2014-03-14 |
+|     2 | raj    |  30050 | 2018-03-17 |
+|     3 | ram    |  33350 | 2008-03-11 |
++-------+--------+--------+------------+
+3 rows in set (0.0005 sec)
+ MySQL  localhost:3306 ssl  payroll_service  SQL > select sum(empId) from employee_payroll;
++------------+
+| sum(empId) |
++------------+
+|          6 |
++------------+                                     select * from employee_payroll;
++-------+--------+--------+------------+           insert into employee_payroll (empId,name,salary,start_date) values(2,'raj',30050,'2018-3-17');
+| empId | name   | salary | start_date |ice  SQL > insert into employee_payroll (empId,name,salary,start_date) values(3,'ram',33350,'2008-3-11');
++-------+--------+--------+------------+
+|     1 | vishal |  30000 | 2014-03-14 |
+|     2 | raj    |  30050 | 2018-03-17 |
+|     3 | ram    |  33350 | 2008-03-11 |
+|     4 | ganesh |  33350 | 2008-03-22 |
++-------+--------+--------+------------+
+4 rows in set (0.2043 sec)
+ MySQL  localhost:3306 ssl  payroll_service  SQL >
+
